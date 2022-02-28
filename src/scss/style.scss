@@ -1,0 +1,407 @@
+@use "sass:math";
+
+// Подключение миксинов ===========================================================================================================================================================================================================================================================================
+@import "base/mixins";
+
+// Подключение шрифтов ===========================================================================================================================================================================================================================================================================
+//&display=swap - добавить при подключении через плагин
+
+// Подключить если есть локальные файлы шрифтов
+@import "fonts/fonts";
+
+// Подключение иконочных шрифтов ==============================================================================================================================================================================================================================================================================
+// Подключить если есть файл иконочного шрифта
+//@import "fonts/icons";
+
+// Шрифт по умолчанию ==============================================================================================================================================================================================================================================================================
+$fontFamily: 'Gilroy';
+$fontSize: rem(18); // где 14(px) - размер шрифта по умолчанию из макета
+
+// Основные цвета
+$mainColor: #2b2b2b; // Цвет шрифта по умолчанию
+
+// НАСТРОЙКИ ===============================================================================================================================================================================================================================================================================================
+// Минимальная ширина страницы
+$minWidth: 320;
+// Ширина полотна (макета)
+$maxWidth: 1920;
+// Ширина ограничивающего контейнера (0 = нет ограничения)
+$maxWidthContainer: 1120;
+// Общий отступ у контейнера
+// (30 = по 15px слева и справа, 0 = нет отступа)
+$containerPadding: 30;
+
+// Ширина срабатывания первого брейкпоинта
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Брейк-поинты
+$pc: em($containerWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$tablet: em(991.98); // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: em(767.98); // Телефоны L
+$mobileSmall: em(479.98); // Телефоны S
+
+// Тип адаптива:
+// 1 = отзывчивость (у контейнера нет брейкпоинтов),
+// 2 = по брейк-поинтам (контейнер меняет свою ширину по брейк-поинтам)
+$responsiveType: 1;
+
+// Обнуление и общие параметры ============================================================================================================================================================================================== =============================================================================================== ===============================================================================================
+@import "base/null";
+
+body {
+   // background-color: #eee;
+   // Скролл заблокирован
+   .lock & {
+      overflow: hidden;
+      touch-action: none;
+   }
+   // Сайт загружен
+   .loaded & {
+   }
+}
+// Оболочка ============================================================================================================================================================================================================================================================================================================================================================================================================================================
+.wrapper {
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+   // Прижимаем footer
+   > main {
+      flex: 1 1 auto;
+   }
+   // Фикс для слайдеров
+   > * {
+      min-width: 0;
+   }
+}
+// Ограничивающий контейнер ======================================================================================================================================================================================================================
+
+/*
+(i) Стили будут применяться ко
+всем классам содержащим *__container
+Например header__container, main__container и т.д.
+Снипет (HTML): cnt
+*/
+@if ($responsiveType==1) {
+   // Отзывчивая
+   [class*="__container"] {
+      @if ($maxWidthContainer>0) {
+         max-width: rem($maxWidthContainer);
+         box-sizing: content-box;
+         margin: 0 auto;
+      }
+      @if ($containerPadding>0) {
+         padding: 0 rem(math.div($containerPadding, 2));
+      }
+   }
+} @else {
+   // По брейк-поинтам
+   [class*="__container"] {
+      margin: 0 auto;
+      @if ($maxWidthContainer>0) {
+         max-width: rem($maxWidthContainer);
+         box-sizing: content-box;
+      } @else {
+         @if ($containerPadding>0) {
+            padding: 0 rem(math.div($containerPadding, 2));
+         }
+      }
+      @media (max-width: $pc) {
+         max-width: rem(970);
+      }
+      @media (max-width: $tablet) {
+         max-width: rem(750);
+      }
+      @media (max-width: $mobile) {
+         max-width: none;
+         @if ($containerPadding>0 and $maxWidthContainer>0) {
+            padding: 0 rem(math.div($containerPadding, 2));
+         }
+      }
+   }
+}
+
+// Подключение базовых стилей, шаблонов (заготовок) и вспомогательных  классов
+// Для подключения/отключения конкретных стилей смотри base.scss
+@import "base";
+
+// Подключение стилей общих элементов проекта
+@import "common";
+
+// Подключение стилей отдельных блоков
+@import "header";
+@import "footer";
+
+// Подключение стилей отдельных страниц
+@import "index";
+
+.page {
+   // .page__mainblock
+
+   &__mainblock {
+      @include adaptiveValue("padding-top", 140, 40, 1920, 991.98, 1);
+      @include adaptiveValue("padding-bottom", 80, 40);
+   }
+
+   // .page__help-you
+
+   &__help-you {
+      @include adaptiveValue("padding-top", 80, 40);
+      @include adaptiveValue("padding-bottom", 80, 40);
+      position: relative;
+      &::before,
+      &::after {
+         content: "";
+         position: absolute;
+         @media (max-width: $tablet) {
+            display: none;
+         }
+      }
+      &::before {
+         background: url("@img/bg/circle.png") center/cover no-repeat;
+         left: -5%;
+         top: 5%;
+         width: 410px;
+         height: 410px;
+         @include adaptiveValue("height", 410, 100);
+         @include adaptiveValue("width", 410, 100);
+         @media (max-width: $pc) {
+            top: -5%;
+         }
+      }
+      &::after {
+         background: url("@img/bg/circle_big.png") center/cover no-repeat;
+         bottom: -50%;
+         left: 90%;
+         width: 668px;
+         height: 667px;
+         @include adaptiveValue("height", 667, 100);
+         @include adaptiveValue("width", 667, 100);
+      }
+   }
+
+   // .page__doubts
+
+   &__doubts {
+      @include adaptiveValue("padding-top", 80, 40);
+      @include adaptiveValue("padding-bottom", 80, 40);
+      @media (max-width: $tablet) {
+         @include adaptiveValue("padding-bottom", 150, 40);
+      }
+   }
+
+   // .page__feedback
+
+   &__feedback {
+      @include adaptiveValue("padding-top", 80, 40);
+      @include adaptiveValue("padding-bottom", 80, 40);
+   }
+
+   // .page__go
+
+   &__go {
+      @include adaptiveValue("padding-top", 80, 40);
+      @include adaptiveValue("padding-bottom", 80, 40);
+   }
+
+   // .page__for-whom
+
+   &__for-whom {
+      @include adaptiveValue("padding-top", 80, 40);
+      @include adaptiveValue("padding-bottom", 80, 40);
+   }
+
+   // .page__feedback-2
+
+   &__feedback-2 {
+      @include adaptiveValue("padding-top", 80, 40);
+      @include adaptiveValue("padding-bottom", 80, 40);
+      position: relative;
+      &::before,
+      &::after {
+         content: "";
+         position: absolute;
+         background: url("@img/bg/curl.png") center / contain no-repeat;
+         z-index: 5;
+         @media (max-width: $tablet) {
+            display: none;
+         }
+      }
+      &::before {
+         top: 50%;
+         right: 10%;
+         transform: rotate(-200deg);
+         width: 100px;
+         height: 70px;
+      }
+      &::after {
+         top: 55%;
+         right: 5%;
+         transform: rotate(-180deg);
+         width: 80px;
+         height: 50px;
+      }
+   }
+
+   // .page__feedback-3
+
+   &__feedback-3 {
+      @include adaptiveValue("padding-top", 80, 40);
+      @include adaptiveValue("padding-bottom", 80, 40);
+      position: relative;
+      &::before,
+      &::after {
+         content: "";
+         position: absolute;
+         background: url("@img/bg/curl.png") center / contain no-repeat;
+         z-index: 5;
+         @media (max-width: $tablet) {
+            display: none;
+         }
+      }
+      &::before {
+         top: 20%;
+         left: 90%;
+         transform: rotate(-200deg);
+         width: 100px;
+         height: 70px;
+      }
+      &::after {
+         top: 30%;
+         left: 90%;
+         transform: rotate(-210deg);
+         width: 50px;
+         height: 30px;
+      }
+   }
+
+   // .page__feedback-4
+
+   &__feedback-4 {
+      @include adaptiveValue("padding-top", 80, 20);
+      @include adaptiveValue("padding-bottom", 80, 20);
+   }
+
+   // .page__bonus
+
+   &__bonus {
+      @include adaptiveValue("padding-top", 80, 20);
+      @include adaptiveValue("padding-bottom", 80, 20);
+   }
+
+   // .page__worms
+
+   &__worms {
+      @include adaptiveValue("padding-top", 80, 20);
+      @include adaptiveValue("padding-bottom", 80, 20);
+   }
+
+   // .page__numbers
+
+   &__numbers {
+      @include adaptiveValue("padding-top", 80, 20);
+      @include adaptiveValue("padding-bottom", 80, 20);
+   }
+
+   // .page__iknow
+
+   &__iknow {
+      @include adaptiveValue("padding-top", 80, 20);
+      @include adaptiveValue("padding-bottom", 80, 20);
+   }
+
+   // .page__feedback-5
+
+   &__feedback-5 {
+      @include adaptiveValue("padding-top", 80, 20);
+      @include adaptiveValue("padding-bottom", 80, 20);
+   }
+
+   // .page__about-style
+
+   &__about-style {
+      @include adaptiveValue("padding-top", 80, 40);
+      @include adaptiveValue("padding-bottom", 80, 20);
+   }
+
+   // .page__proofs
+
+   &__proofs {
+      @include adaptiveValue("padding-top", 80, 20);
+      @include adaptiveValue("padding-bottom", 80, 40);
+   }
+
+   // .page__reasons
+
+   &__reasons {
+      @include adaptiveValue("padding-top", 80, 40);
+      @include adaptiveValue("padding-bottom", 80, 40);
+   }
+
+   // .page__programms
+
+   &__programms {
+      @include adaptiveValue("padding-top", 80, 40);
+      @include adaptiveValue("padding-bottom", 80, 40);
+   }
+
+   // .page__feedback-7
+
+   &__feedback-7 {
+      @include adaptiveValue("padding-top", 80, 40);
+      @include adaptiveValue("padding-bottom", 80, 40);
+   }
+
+   // .page__packages
+
+   &__packages {
+   }
+
+   // .page__for-what
+
+   &__for-what {
+      @include adaptiveValue("padding-top", 80, 40);
+      @include adaptiveValue("padding-bottom", 80, 20);
+   }
+
+   // .page__difference
+
+   &__difference {
+      @include adaptiveValue("padding-top", 80, 60);
+      @include adaptiveValue("padding-bottom", 80, 60);
+   }
+
+   // .page__investment
+
+   &__investment {
+      @include adaptiveValue("padding-top", 80, 60);
+      @include adaptiveValue("padding-bottom", 80, 60);
+   }
+
+   // .page__chance
+
+   &__chance {
+      @include adaptiveValue("padding-top", 80, 40);
+      @include adaptiveValue("padding-bottom", 80, 40);
+   }
+
+   // .page__reviews
+
+   &__reviews {
+      @include adaptiveValue("padding-top", 80, 40);
+      @include adaptiveValue("padding-bottom", 80, 40);
+   }
+
+   // .page__be-happpy
+
+   &__be-happpy {
+      @include adaptiveValue("padding-top", 80, 40);
+      @include adaptiveValue("padding-bottom", 80, 40);
+   }
+}
+//========================================================================================================================================================
+.feedback__container-8 {
+   @media (max-width: $mobileSmall) {
+      padding: 0;
+   }
+}

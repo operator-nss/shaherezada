@@ -1,0 +1,109 @@
+//====================================================================================================
+.footer {
+   background-color: #1a5e73;
+   @include adaptiveValue("padding-top", 51, 30);
+   @include adaptiveValue("padding-bottom", 184, 60);
+   color: #fff;
+   // .footer__container
+
+   &__container {
+   }
+
+   // .footer__items
+
+   &__items {
+      display: flex;
+      justify-content: space-between;
+      @media (max-width: $mobile) {
+         flex-direction: column;
+      }
+      // align-items: center;
+   }
+
+   // .footer__item
+
+   &__item {
+      @media (max-width: $mobile) {
+         text-align: center;
+         &:not(:last-child) {margin-bottom: rem(30);}
+      }
+   }
+
+   // .footer__link
+
+   &__link {
+      margin: rem(0) rem(0) rem(54) rem(0);
+      color: #0eb7fd;
+      display: block;
+      font-size: 17px;
+      font-weight: 500;
+      // line-height: math.div(48, 17);
+      transition: color 0.3s ease 0s;
+      text-decoration: underline !important;
+      @media (any-hover: hover) {
+         &:hover {
+            color: #ffaf1b;
+         }
+      }
+   }
+
+   // .footer__mail
+
+   &__mail {
+      a {
+         transition: color 0.3s ease 0s;
+         @media (any-hover: hover) {
+            &:hover {
+               color: #ffaf1b;
+            }
+         }
+      }
+   }
+
+   // .footer__label
+
+   &__label {
+      margin: rem(0) rem(0) rem(10) rem(0);
+   }
+
+   // .footer__location
+
+   &__location {
+      text-align: right;
+      @media (max-width: $mobile) {
+         text-align: center;
+      }
+      margin: rem(0) rem(0) rem(28) rem(0);
+      p {
+         &:not(:last-child) {
+            margin-bottom: rem(20);
+         }
+      }
+   }
+
+   // .footer__contract
+
+   &__contract {
+      text-align: right;
+      margin: rem(0) rem(0) rem(54) rem(0);
+      color: #0eb7fd;
+      display: block;
+      font-size: 17px;
+      font-weight: 500;
+      line-height: math.div(48, 17);
+      text-decoration: underline !important;
+      @media (max-width:$mobile){
+          text-align: center;
+      }
+      span {
+         transition: color 0.3s ease 0s;
+         @media (any-hover: hover) {
+            &:hover {
+               color: #ffaf1b;
+            }
+         }
+      }
+   }
+}
+
+//====================================================================================================

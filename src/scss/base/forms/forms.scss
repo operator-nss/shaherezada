@@ -1,0 +1,110 @@
+//<FORM>
+// Снипет (HTML):
+.form {
+   &__row {
+   }
+   &__column {
+   }
+   &__line {
+   }
+   &__input {
+   }
+   &__button {
+   }
+   &__error {
+   }
+}
+
+#ltForm1167238,
+#ltForm9117822,
+#ltForm4700799 {
+   max-width: 337px;
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   input {
+      display: block;
+      width: 100%;
+      outline: none;
+      color: #865656;
+      font-family: "FuturaPT", sans-serif;
+      font-size: 17px;
+      line-height: 1.4;
+      font-weight: 400;
+      letter-spacing: 0.42px;
+      padding: 18px 10px;
+      padding-left: 22px;
+      border: none;
+      border-radius: 8px;
+      background-color: #f6f6f6;
+      margin-bottom: 10px;
+   }
+   button {
+      display: block;
+      max-width: 245px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      -webkit-box-shadow: 0 4px 0 #00a38e;
+      box-shadow: 0 4px 0 #00a38e;
+      background: -webkit-gradient(linear, left top, left bottom, from(#bbfbec), to(#51cbcb));
+      background: linear-gradient(to bottom, #bbfbec 0%, #51cbcb 100%);
+      border-radius: 20px;
+      text-shadow: 1px 1px 0 #027465;
+      color: white;
+      font-family: "FuturaPT", sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.4;
+      text-transform: uppercase;
+      letter-spacing: 0.38px;
+      padding: 16.5px 10px;
+      margin-top: 22px;
+      position: relative;
+      margin-bottom: 18px;
+      transition: all 0.3s ease 0s;
+      &:active {
+         -webkit-box-shadow: 0 0px 0 #00a38e;
+      }
+
+      @media (any-hover: hover) {
+         &:hover {
+            -webkit-box-shadow: 0 6px 0 #00a38e;
+            transform: translate(0, -2px);
+         }
+      }
+   }
+}
+//</FORM>
+
+// <BUTTONS>
+// Снипет (HTML): btn
+// @import "button";
+
+// <INPUTS>
+// Снипет (HTML): inp
+// @import "input";
+
+// <CHECK>
+// Снипет (HTML): chk
+// @import "checkbox";
+
+// <RADIO>
+// Снипет (HTML): opt
+// @import "radio";
+
+// <SELECT>
+// Снипет (HTML): sel
+// @import "select";
+
+// <RATING>
+// Снипет (HTML): rating
+// @import "rating";
+
+// <QUANTITY>
+// Снипет (HTML): qa
+// @import "quantity";
+
+// <RANGE>
+// Снипет (HTML):
+// @import "range";
