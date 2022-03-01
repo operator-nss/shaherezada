@@ -1,4 +1,25 @@
 @font-face {
+	font-family: GilroyBold;
+	font-display: swap;
+	src: url("../fonts/GilroyBold.woff2") format("woff2"), url("../fonts/GilroyBold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: GilroyLight;
+	font-display: swap;
+	src: url("../fonts/GilroyLight.woff2") format("woff2"), url("../fonts/GilroyLight.woff") format("woff");
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: GilroyExtrabold;
+	font-display: swap;
+	src: url("../fonts/GilroyExtrabold.woff2") format("woff2"), url("../fonts/GilroyExtrabold.woff") format("woff");
+	font-weight: 800;
+	font-style: normal;
+}
+@font-face {
 	font-family: futura;
 	font-display: swap;
 	src: url("../fonts/futura-pt.woff2") format("woff2"), url("../fonts/futura-pt.woff") format("woff");
@@ -6,51 +27,30 @@
 	font-style: normal;
 }
 @font-face {
-	font-family: Gilroy;
+	font-family: GilroyBlack;
 	font-display: swap;
-	src: url("../fonts/Gilroy-Black.woff2") format("woff2"), url("../fonts/Gilroy-Black.woff") format("woff");
+	src: url("../fonts/GilroyBlack.woff2") format("woff2"), url("../fonts/GilroyBlack.woff") format("woff");
 	font-weight: 900;
 	font-style: normal;
 }
 @font-face {
-	font-family: Gilroy;
+	font-family: GilroyMedium;
 	font-display: swap;
-	src: url("../fonts/Gilroy-Extrabold.woff2") format("woff2"), url("../fonts/Gilroy-Extrabold.woff") format("woff");
-	font-weight: 800;
-	font-style: normal;
-}
-@font-face {
-	font-family: Gilroy;
-	font-display: swap;
-	src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
-	font-weight: 700;
-	font-style: normal;
-}
-@font-face {
-	font-family: Gilroy;
-	font-display: swap;
-	src: url("../fonts/Gilroy-Light.woff2") format("woff2"), url("../fonts/Gilroy-Light.woff") format("woff");
-	font-weight: 300;
-	font-style: normal;
-}
-@font-face {
-	font-family: Gilroy;
-	font-display: swap;
-	src: url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff");
+	src: url("../fonts/GilroyMedium.woff2") format("woff2"), url("../fonts/GilroyMedium.woff") format("woff");
 	font-weight: 500;
 	font-style: normal;
 }
 @font-face {
-	font-family: Gilroy;
+	font-family: GilroySemibold;
 	font-display: swap;
-	src: url("../fonts/Gilroy-Semibold.woff2") format("woff2"), url("../fonts/Gilroy-Semibold.woff") format("woff");
+	src: url("../fonts/GilroySemibold.woff2") format("woff2"), url("../fonts/GilroySemibold.woff") format("woff");
 	font-weight: 600;
 	font-style: normal;
 }
 @font-face {
-	font-family: 'Gilroy-Regular';
+	font-family: GilroyRegular;
 	font-display: swap;
-	src: url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
+	src: url("../fonts/GilroyRegular.woff2") format("woff2"), url("../fonts/GilroyRegular.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 }
@@ -62,16 +62,16 @@
 	font-style: normal;
 }
 @font-face {
-	font-family: MuseoSansCyrl700;
+	font-family: MuseoSansCyrl500;
 	font-display: swap;
-	src: url("../fonts/MuseoSansCyrl700.woff2") format("woff2"), url("../fonts/MuseoSansCyrl700.woff") format("woff");
+	src: url("../fonts/MuseoSansCyrl500.woff2") format("woff2"), url("../fonts/MuseoSansCyrl500.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 }
 @font-face {
-	font-family: MuseoSansCyrl500;
+	font-family: MuseoSansCyrl700;
 	font-display: swap;
-	src: url("../fonts/MuseoSansCyrl500.woff2") format("woff2"), url("../fonts/MuseoSansCyrl500.woff") format("woff");
+	src: url("../fonts/MuseoSansCyrl700.woff2") format("woff2"), url("../fonts/MuseoSansCyrl700.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 }

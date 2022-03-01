@@ -14,7 +14,7 @@
 //@import "fonts/icons";
 
 // Шрифт по умолчанию ==============================================================================================================================================================================================================================================================================
-$fontFamily: 'Gilroy';
+$fontFamily: GilroyRegular;
 $fontSize: rem(18); // где 14(px) - размер шрифта по умолчанию из макета
 
 // Основные цвета
@@ -140,13 +140,13 @@ body {
 
    &__mainblock {
       @include adaptiveValue("padding-top", 140, 40, 1920, 991.98, 1);
-      @include adaptiveValue("padding-bottom", 80, 40);
+      @include adaptiveValue("padding-bottom", 47, 40);
    }
 
    // .page__help-you
 
    &__help-you {
-      @include adaptiveValue("padding-top", 80, 40);
+      @include adaptiveValue("padding-top", 47, 40);
       @include adaptiveValue("padding-bottom", 80, 40);
       position: relative;
       &::before,
@@ -184,7 +184,7 @@ body {
 
    &__doubts {
       @include adaptiveValue("padding-top", 80, 40);
-      @include adaptiveValue("padding-bottom", 80, 40);
+      @include adaptiveValue("padding-bottom", 40, 40);
       @media (max-width: $tablet) {
          @include adaptiveValue("padding-bottom", 150, 40);
       }
@@ -193,7 +193,7 @@ body {
    // .page__feedback
 
    &__feedback {
-      @include adaptiveValue("padding-top", 80, 40);
+      @include adaptiveValue("padding-top", 40, 40);
       @include adaptiveValue("padding-bottom", 80, 40);
    }
 
@@ -202,6 +202,20 @@ body {
    &__go {
       @include adaptiveValue("padding-top", 80, 40);
       @include adaptiveValue("padding-bottom", 80, 40);
+      position: relative;
+      &::before{
+         content:'';
+         background: url("@img/bg/circle.png") center / contain no-repeat;
+         top: -39%;
+         right: 82%;
+         width: 668px;
+         height: 667px;
+         position: absolute;
+         z-index: -1;
+         @media (max-width: $tablet) {
+            display: none;
+         }
+      }
    }
 
    // .page__for-whom

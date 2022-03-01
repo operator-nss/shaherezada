@@ -4,11 +4,11 @@
    color: #ffffff;
    font-size: 22px;
    @include adaptiveValue("font-size", 22, 10);
-   font-weight: 900;
    line-height: math.div(60, 22);
    text-align: center;
    text-transform: uppercase;
    letter-spacing: 2.2px;
+   font-family: GilroyBlack;
    background-color: #bb0057;
    border-radius: 39px;
    white-space: nowrap;
@@ -36,6 +36,7 @@
    letter-spacing: 3.6px;
    line-height: normal;
    // white-space: nowrap;
+   font-family: GilroyBold;
    margin: rem(0) rem(0) rem(50) rem(0);
    position: relative;
    z-index: 2;
@@ -45,7 +46,7 @@
    color: var(--t);
    font-size: 20px;
    @include adaptiveValue("font-size", 20, 14);
-   font-weight: 700;
+   font-family: GilroyBold;
    line-height: math.div(42, 20);
    letter-spacing: 2.5px;
 }
@@ -70,7 +71,7 @@
       display: inline-flex;
       justify-content: center;
       align-items: center;
-      padding: rem(20) rem(60);
+      padding: rem(10) rem(60);
       transform: translate(0px, 40px);
       position: relative;
       z-index: 5;
@@ -176,7 +177,7 @@
       line-height: math.div(40, 18);
       text-align: left;
       span {
-         font-weight: 500;
+         font-family: GilroyMedium;
       }
    }
 }
@@ -283,4 +284,126 @@
    &__corner-top-4 {
       background: url("@img/icon/05.png") center no-repeat;
    }
+}
+//========================================================================================================================================================
+
+.timer-wrap {
+   margin-top: 10px;
+}
+
+.timer-wrap .cd_timer {
+   max-width: 320px;
+   width: 100%;
+   position: relative;
+   z-index: 1;
+   padding-top: 20px !important;
+}
+
+.timer-wrap .cd_timer:after {
+   content: "";
+   position: absolute;
+   z-index: -1;
+   top: 0;
+   left: 0;
+   right: 0;
+   height: 91px;
+   background-color: #f86094;
+   border-radius: 20px;
+}
+
+.timer-wrap .cd_timer ul li {
+   padding: 0 !important;
+   position: relative;
+}
+
+.timer-wrap .cd_timer ul li:after {
+   content: ":";
+   position: absolute;
+   top: -12px;
+   right: -10px;
+   font-size: 50px;
+   font-family: "FuturaPT", sans-serif;
+   color: #fff;
+   font-weight: 700;
+}
+
+.timer-wrap .cd_timer ul li:last-child:after {
+   display: none;
+}
+
+.timer-wrap .cd_timer .cd_num {
+   color: #fff;
+   font-size: 50px !important;
+   font-family: "FuturaPT", sans-serif !important;
+   font-weight: 700;
+   margin-bottom: 20px;
+}
+
+.timer-wrap .cd_timer .cd_text {
+   color: #1b9c9a;
+   font-size: 18px !important;
+   font-family: "FuturaPT", sans-serif !important;
+   font-weight: 300;
+   text-transform: lowercase;
+}
+
+.thumb-wrap {
+   position: relative;
+   padding-bottom: 57.5%;
+   height: 0;
+   overflow: hidden;
+}
+
+.thumb-wrap1 {
+   padding-bottom: 76.5%;
+}
+
+.thumb-wrap iframe {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   border-width: 0;
+   outline-width: 0;
+}
+
+.start-timer-container {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -ms-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
+   justify-content: space-between;
+}
+
+.start-timer-text {
+   max-width: 285px;
+   width: 100%;
+   color: #f86094;
+   font-size: 17px;
+   font-weight: 500;
+   line-height: 1.8;
+}
+
+.timer-wrap {
+   margin-top: 0;
+   margin-bottom: 20px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.timer-wrap .cd_timer .cd_num {
+   font-size: 40px !important;
+}
+
+.timer-wrap .cd_timer ul li:after {
+   font-size: 40px;
+   top: -8px;
+}
+
+.timer-wrap .cd_timer:after {
+   height: 85px;
 }
