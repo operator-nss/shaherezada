@@ -8,9 +8,9 @@
    text-align: center;
    text-transform: uppercase;
    letter-spacing: 2.2px;
-   font-family: GilroyBlack;
    background-color: #bb0057;
    border-radius: 39px;
+   font-weight: 900;
    white-space: nowrap;
    padding: rem(24) rem(43);
    transition: background-color 0.3s ease 0s;
@@ -36,7 +36,6 @@
    letter-spacing: 3.6px;
    line-height: normal;
    // white-space: nowrap;
-   font-family: GilroyBold;
    margin: rem(0) rem(0) rem(50) rem(0);
    position: relative;
    z-index: 2;
@@ -177,7 +176,7 @@
       line-height: math.div(40, 18);
       text-align: left;
       span {
-         font-family: GilroyMedium;
+         font-weight: 500;
       }
    }
 }
