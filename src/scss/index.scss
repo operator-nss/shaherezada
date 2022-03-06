@@ -629,6 +629,7 @@
       bottom: -50%;
       width: 298px;
       height: 303px;
+      transform: translate(30%, 0px);
       // @media (max-width: $mobileSmall) {
       //    width: 200px;
       //    height: 150px;
@@ -645,13 +646,23 @@
          background: url("@img/bg/circle.png") center / contain no-repeat;
          top: 20%;
          left: 10%;
-         width: 410px;
-         height: 410px;
+         width: 260px;
+         height: 260px;
          z-index: -1;
          position: absolute;
          @media (max-width: $tablet) {
             display: none;
          }
+      }
+   }
+
+   // .item-doubts__text-2
+
+   &__text-2 {
+      padding: rem(10) rem(50);
+      p {
+         font-style: normal;
+         padding-right: 200px;
       }
    }
 }
@@ -1288,6 +1299,7 @@
          text-align: left;
       }
    }
+   // .for-whom__text-2
 
    // .for-whom__image
 
@@ -1363,6 +1375,23 @@
       z-index: 2;
       margin: rem(78) rem(0) rem(0) rem(0);
       @include adaptiveValue("margin-top", 78, 20);
+   }
+
+   // .for-whom__image-2
+
+   &__image-2 {
+      transform: translate(30%, 0px);
+      &::before {
+         content: "";
+         width: 279px;
+         height: 287px;
+      }
+   }
+
+   // .for-whom__text-2
+
+   &__text-2 {
+      padding: rem(10) rem(0) rem(0) rem(150);
    }
 }
 
@@ -3212,7 +3241,6 @@
    }
 }
 
-
 .description-programms {
    flex: 0 1 50%;
    @media (max-width: $tablet) {
@@ -3276,7 +3304,7 @@
          &:not(:last-child) {
             margin-bottom: rem(30);
          }
-         &:last-child{
+         &:last-child {
             line-height: math.div(48, 20);
          }
          span {
@@ -3332,6 +3360,7 @@
    &__buttons {
       flex: 0 1 59%;
       display: flex;
+      padding: rem(0) rem(20) rem(0) rem(0);
 
       justify-content: space-between;
       @media (max-width: $tablet) {
@@ -3345,7 +3374,7 @@
    // .packages__button
 
    &__button {
-      padding: rem(0) rem(5);
+      padding: rem(0) rem(10);
       @media (max-width: $tablet) {
          padding: rem(20) rem(5);
          .button {
@@ -3577,7 +3606,8 @@
       position: absolute;
       width: 827px;
       left: 110%;
-      top: 0%;
+      top: 0;
+      transform: translate(0%, -30%);
       z-index: -1;
       height: 800px;
       @include adaptiveValue("height", 827, 100);
@@ -3613,64 +3643,6 @@
       }
    }
 }
-.cd_timer {
-   overflow: visible !important;
-}
-.cd-container {
-   overflow: visible !important;
-}
-.cd_timer {
-   display: flex;
-   color: #fff;
-   width: 100%;
-   height: 100%;
-   width: 300px;
-   border-radius: 20px;
-   padding: 20px;
-   background-color: #f76fad;
-   align-items: center;
-   ul {
-      overflow: inherit !important;
-   }
-}
-
-.cd-container {
-   ul {
-      // padding: rem(29) rem(34);
-      overflow: visible !important;
-   }
-}
-
-.cd_num {
-   span {
-      color: #fff;
-      font-family: Gilroy;
-      font-size: 50px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      @media (max-width: $mobileSmall) {
-         font-size: rem(30);
-      }
-   }
-}
-
-.cd_text {
-   color: #1fa2ca !important;
-   font-family: Gilroy !important;
-   font-size: 19px !important;
-   font-weight: 300 !important;
-   line-height: math.div(44, 18) !important;
-   position: relative;
-   // top: 13px;
-   z-index: 2;
-   padding-top: 50px !important;
-}
-
-.cd_timer .cd_text {
-   // font-size: 1.16em !important;
-   // line-height: 1.16em !important;
-   padding-top: 2.4em !important;
-}
 
 //========================================================================================================================================================
 
@@ -3693,16 +3665,16 @@
          top: 0%;
          width: 76px;
          height: 46px;
-         transform: rotate(50deg);
+         transform: rotate(50deg) translate(-100px, 0px);
          z-index: 5;
       }
       &::after {
          background: url("@img/bg/curl-small.png") no-repeat;
          left: 0%;
          top: 10%;
-         width: 55px;
-         transform: rotate(0deg);
-         height: 39px;
+         width: 75px;
+         transform: rotate(0deg) translate(-100px, -100px);
+         height: 59px;
          z-index: 5;
       }
    }
@@ -3715,8 +3687,8 @@
       text-transform: none;
       max-width: 657px;
       margin: 0 auto;
-      margin-bottom: 100px;
-      @include adaptiveValue("margin-bottom", 100, 50);
+      margin-bottom: 10px;
+      @include adaptiveValue("margin-bottom", 10, 0);
    }
 
    // .for-what__item
@@ -3739,6 +3711,7 @@
    &__image {
       flex: 0 1 rem(300);
       position: relative;
+      transform: translate(35%, 20px);
       img {
          width: 100%;
          height: 100%;
@@ -3779,6 +3752,7 @@
       color: #1f1f1f;
       font-size: 20px;
       @include adaptiveValue("font-size", 20, 12);
+      padding: rem(0) rem(0) rem(0) rem(100);
       line-height: math.div(48, 20);
       span {
          color: #f79b0c;
@@ -3802,21 +3776,21 @@
          }
       }
       &::before {
-         background: url("@img/bg/curl.png") left top no-repeat;
+         background: url("@img/bg/curl.png") center / contain no-repeat;
          right: 0%;
-         top: -100px;
+         top: 0px;
          width: 76px;
          height: 46px;
-         transform: rotate(150deg);
+         transform: rotate(150deg) translate(-140px, 100px);
          z-index: 5;
       }
       &::after {
-         background: url("@img/bg/curl-small.png") no-repeat;
+         background: url("@img/bg/curl-small.png") center / contain no-repeat;
          right: -5%;
          top: -20px;
-         width: 55px;
-         transform: rotate(150deg);
-         height: 39px;
+         width: 85px;
+         transform: rotate(150deg) translate(-100px, 25px);
+         height: 59px;
          z-index: 5;
       }
    }
@@ -3829,6 +3803,7 @@
       @include adaptiveValue("font-size", 20, 12);
       line-height: math.div(48, 20);
       text-align: center;
+      max-width: 978px;
       margin: rem(0) rem(0) rem(25) rem(0);
    }
 
@@ -3853,45 +3828,60 @@
 
 .item-iknow-bg-4 {
    position: absolute;
-   right: -5%;
-   top: 0px;
+   right: -10%;
+   top: -150px;
 }
 //========================================================================================================================================================
 
 .chance {
    position: relative;
-   &::before {
-      content: "";
-      background: url("@img/bg/circle_big.png") center/cover no-repeat;
-      position: absolute;
-      width: 827px;
-      z-index: -1;
-      right: 93%;
-      top: 0%;
-      height: 800px;
-      @include adaptiveValue("height", 827, 100);
-      @include adaptiveValue("width", 827, 100);
-      @media (max-width: $tablet) {
-         display: none;
-      }
-   }
+   &::before,
    &::after {
       content: "";
-      background: url("@img/bg/curl.png") left top no-repeat;
-      left: 85%;
-      top: 10%;
       position: absolute;
-      width: 76px;
-      height: 46px;
-      transform: rotate(150deg);
-      z-index: 5;
-      @media (max-width: $pc) {
-         display: none;
-      }
+      left: 70%;
+      bottom: 0;
    }
+   &::before {
+      background: url("@img/bg/curl.png") center / contain no-repeat;
+      width: 86px;
+      height: 56px;
+      @include adaptiveValue("height", 46, 26);
+      @include adaptiveValue("width", 76, 46);
+      z-index: 5;
+      transform: rotate(235deg) translate(94%, 188px);
+   }
+   &::after {
+      background: url("@img/bg/curl-small.png") center / contain no-repeat;
+      width: 75px;
+      height: 59px;
+      @include adaptiveValue("height", 39, 20);
+      @include adaptiveValue("width", 55, 30);
+      z-index: 5;
+      transform: rotate(226deg) translate(20px, 107px);
+   }
+
    // .chance__container
 
    &__container {
+      position: relative;
+
+      &::before {
+         content: "";
+         background: url("@img/bg/circle_big.png") center/cover no-repeat;
+         position: absolute;
+         width: 827px;
+         z-index: -1;
+         right: 93%;
+         top: 0%;
+         height: 800px;
+         transform: translate(-40%, 0px);
+         @include adaptiveValue("height", 827, 100);
+         @include adaptiveValue("width", 827, 100);
+         @media (max-width: $tablet) {
+            display: none;
+         }
+      }
    }
 
    // .chance__text
@@ -3899,13 +3889,29 @@
    &__text {
       color: #313131;
       font-size: 21px;
+      position: relative;
       @include adaptiveValue("font-size", 21, 12);
       line-height: math.div(48, 21);
       margin: rem(0) rem(0) rem(84) rem(0);
+      padding: rem(0) rem(0) rem(0) rem(110);
       @include adaptiveValue("margin-bottom", 84, 30);
       p {
          &:not(:last-child) {
             margin-bottom: rem(20);
+         }
+      }
+      &::after {
+         content: "";
+         background: url("@img/bg/curl.png") left top no-repeat;
+         left: 0%;
+         top: 0%;
+         transform: rotate(65deg) translate(-20px, 50px);
+         position: absolute;
+         width: 76px;
+         height: 46px;
+         z-index: 5;
+         @media (max-width: $pc) {
+            display: none;
          }
       }
    }
@@ -3937,6 +3943,8 @@
 }
 .item-chance {
    position: relative;
+   padding: rem(0) rem(0) rem(0) rem(190);
+   @include adaptiveValue("padding-left", 190, 0);
    z-index: 2;
    display: flex;
    align-items: center;
@@ -4002,7 +4010,7 @@
 
    &__title {
       text-align: center;
-      margin: rem(0) rem(0) rem(76) rem(0);
+      margin: rem(0) rem(0) rem(120) rem(0);
       span {
          position: relative;
          &::before,
@@ -4033,6 +4041,7 @@
    // .reviews__image
 
    &__image {
+      padding: rem(0) rem(130);
       &:last-child {
          position: relative;
          &::after {
@@ -4090,14 +4099,14 @@
 
    &__bg-1 {
       &::before {
-         left: 0%;
-         transform: rotate(15deg);
+         left: 11%;
+         transform: translate(0px, 0px) rotate(15deg);
          top: 0%;
       }
       &::after {
-         left: 5%;
+         left: 14%;
          transform: rotate(18deg);
-         top: -15%;
+         top: -21%;
       }
    }
 
@@ -4105,14 +4114,14 @@
 
    &__bg-2 {
       &::before {
-         right: 0%;
-         bottom: 0%;
-         transform: rotate(213deg);
+         right: -1%;
+         bottom: 18%;
+         transform:translate(-200px, 0px) rotate(213deg);
       }
       &::after {
          right: 0%;
-         bottom: 20%;
-         transform: rotate(180deg);
+         bottom: 35%;
+         transform:translate(-200px, 0px) rotate(180deg);
       }
    }
 
@@ -4124,6 +4133,7 @@
       @include adaptiveValue("font-size", 23, 14);
       font-weight: 700;
       line-height: math.div(48, 23);
+      // letter-spacing: 3px;
       text-align: center;
       margin: rem(0) rem(0) rem(107) rem(0);
       @include adaptiveValue("margin-bottom", 107, 30);
@@ -4135,3 +4145,4 @@
       text-align: center;
    }
 }
+//========================================================================================================================================================

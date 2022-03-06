@@ -225,6 +225,13 @@ body {
       @include adaptiveValue("padding-bottom", 50, 40);
    }
 
+      // .page__for-whom-2
+
+      &__for-whom-2 {
+         @include adaptiveValue("padding-top", 0, 20);
+         @include adaptiveValue("padding-bottom", 20, 40);
+      }
+
    // page__for-whom-4
 
    &__for-whom-4 {
@@ -415,7 +422,7 @@ body {
    &__packages {
       @include adaptiveValue("padding-top", 70, 40);
       @include adaptiveValue("padding-bottom", 70, 20);
-      
+
    }
 
    // .page__for-what
@@ -428,8 +435,8 @@ body {
    // .page__difference
 
    &__difference {
-      @include adaptiveValue("padding-top", 80, 60);
-      @include adaptiveValue("padding-bottom", 80, 60);
+      @include adaptiveValue("padding-top", 20, 60);
+      @include adaptiveValue("padding-bottom", 20, 60);
    }
 
    // .page__investment
@@ -443,7 +450,7 @@ body {
 
    &__chance {
       @include adaptiveValue("padding-top", 80, 40);
-      @include adaptiveValue("padding-bottom", 80, 40);
+      @include adaptiveValue("padding-bottom", 50, 40);
    }
 
    // .page__reviews
@@ -456,7 +463,7 @@ body {
    // .page__be-happpy
 
    &__be-happpy {
-      @include adaptiveValue("padding-top", 80, 40);
+      @include adaptiveValue("padding-top", 20, 40);
       @include adaptiveValue("padding-bottom", 80, 40);
    }
 }

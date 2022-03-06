@@ -22,7 +22,15 @@
          background-color: #f655a0;
       }
    }
+
+   // .button__packages
+
+   &__packages {
+      width: 188px;
+      padding: 21px 27px;
+   }
 }
+
 //========================================================================================================================================================
 
 .title {
@@ -286,123 +294,92 @@
 }
 //========================================================================================================================================================
 
-.timer-wrap {
-   margin-top: 10px;
+.cd_timer {
+   overflow: visible !important;
 }
-
-.timer-wrap .cd_timer {
-   max-width: 320px;
-   width: 100%;
-   position: relative;
-   z-index: 1;
-   padding-top: 20px !important;
+.cd-container {
+   overflow: visible !important;
 }
-
-.timer-wrap .cd_timer:after {
-   content: "";
-   position: absolute;
-   z-index: -1;
-   top: 0;
-   left: 0;
-   right: 0;
-   height: 91px;
-   background-color: #f86094;
-   border-radius: 20px;
-}
-
-.timer-wrap .cd_timer ul li {
-   padding: 0 !important;
-   position: relative;
-}
-
-.timer-wrap .cd_timer ul li:after {
-   content: ":";
-   position: absolute;
-   top: -12px;
-   right: -10px;
-   font-size: 50px;
-   font-family: "FuturaPT", sans-serif;
+.cd_timer {
+   display: flex;
    color: #fff;
-   font-weight: 700;
-}
-
-.timer-wrap .cd_timer ul li:last-child:after {
-   display: none;
-}
-
-.timer-wrap .cd_timer .cd_num {
-   color: #fff;
-   font-size: 50px !important;
-   font-family: "FuturaPT", sans-serif !important;
-   font-weight: 700;
-   margin-bottom: 20px;
-}
-
-.timer-wrap .cd_timer .cd_text {
-   color: #1b9c9a;
-   font-size: 18px !important;
-   font-family: "FuturaPT", sans-serif !important;
-   font-weight: 300;
-   text-transform: lowercase;
-}
-
-.thumb-wrap {
-   position: relative;
-   padding-bottom: 57.5%;
-   height: 0;
-   overflow: hidden;
-}
-
-.thumb-wrap1 {
-   padding-bottom: 76.5%;
-}
-
-.thumb-wrap iframe {
-   position: absolute;
-   top: 0;
-   left: 0;
    width: 100%;
    height: 100%;
-   border-width: 0;
-   outline-width: 0;
+   width: 300px;
+   border-radius: 20px;
+   padding: 20px;
+   background-color: #f76fad;
+   align-items: center;
+   ul {
+      overflow: inherit !important;
+   }
 }
 
-.start-timer-container {
-   display: -webkit-box;
-   display: -ms-flexbox;
-   display: flex;
-   -ms-flex-wrap: wrap;
-   flex-wrap: wrap;
-   -webkit-box-pack: justify;
-   -ms-flex-pack: justify;
-   justify-content: space-between;
+.cd-container {
+   ul {
+      // padding: rem(29) rem(34);
+      overflow: visible !important;
+   }
 }
 
-.start-timer-text {
-   max-width: 285px;
-   width: 100%;
-   color: #f86094;
-   font-size: 17px;
-   font-weight: 500;
-   line-height: 1.8;
+.cd_num {
+   span {
+      color: #fff;
+      font-family: Gilroy;
+      font-size: 50px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      @media (max-width: $mobileSmall) {
+         font-size: rem(30);
+      }
+   }
 }
 
-.timer-wrap {
-   margin-top: 0;
-   margin-bottom: 20px;
-   margin-left: auto;
-   margin-right: auto;
+.cd_text {
+   color: #1fa2ca !important;
+   font-family: Gilroy !important;
+   font-size: 19px !important;
+   font-weight: 300 !important;
+   line-height: math.div(44, 18) !important;
+   position: relative;
+   // top: 13px;
+   z-index: 2;
+   padding-top: 50px !important;
 }
 
-.timer-wrap .cd_timer .cd_num {
-   font-size: 40px !important;
+.cd_timer .cd_text {
+   // font-size: 1.16em !important;
+   // line-height: 1.16em !important;
+   padding-top: 2.4em !important;
 }
 
-.timer-wrap .cd_timer ul li:after {
-   font-size: 40px;
-   top: -8px;
+.cd_days {
+   position: relative;
+   &::after {
+      content: ":";
+      position: absolute;
+      top: 0%;
+      right: 0;
+      color: #ffffff;
+      font-family: Gilroy;
+      font-size: 50px;
+      font-weight: 700;
+      line-height: 23.96px;
+      text-align: center;
+      letter-spacing: 1.5px;
+   }
 }
 
-.timer-wrap .cd_timer:after {
-   height: 85px;
+.cd_num {
+   color: #ffffff;
+   font-family: Gilroy;
+   font-size: 50px;
+   font-weight: 700;
+   line-height: 23.96px;
+   text-align: center;
+   letter-spacing: 1.5px;
+}
+
+.cd_text {
+   display: none;
 }
