@@ -384,6 +384,12 @@
     }), 0);
     const circleType = new CircleType(document.getElementById("circle-text"));
     circleType.radius(160).dir(-1);
+    window.addEventListener("DOMContentLoaded", (() => {
+        setTimeout((() => {
+            const timer = document.querySelector(".cd-container");
+            timer.style.overflow = "visible!important";
+        }), 2e3);
+    }));
     window["FLS"] = false;
     isWebp();
     pageNavigation();

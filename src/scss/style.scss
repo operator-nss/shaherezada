@@ -435,15 +435,15 @@ body {
    // .page__difference
 
    &__difference {
-      @include adaptiveValue("padding-top", 20, 60);
-      @include adaptiveValue("padding-bottom", 20, 60);
+      @include adaptiveValue("padding-top", 20, 40);
+      @include adaptiveValue("padding-bottom", 20, 20);
    }
 
    // .page__investment
 
    &__investment {
-      @include adaptiveValue("padding-top", 80, 60);
-      @include adaptiveValue("padding-bottom", 80, 60);
+      @include adaptiveValue("padding-top", 80, 30);
+      @include adaptiveValue("padding-bottom", 80, 30);
    }
 
    // .page__chance

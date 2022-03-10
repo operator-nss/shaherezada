@@ -14,7 +14,10 @@ const circleType = new CircleType(document.getElementById('circle-text'));
 circleType.radius(160).dir(-1);
 
 //========================================================================================================================================================
-// window.addEventListener('DOMContentLoaded', () => {
-//    const timer = document.querySelector('.cd-container');
-//    timer.style.overflow = "visible!important";
-// })
+window.addEventListener('DOMContentLoaded', () => {
+   setTimeout(() => {
+      const timer = document.querySelector('.cd-container');
+      timer.style.overflow = "visible!important";
+   }, 2000);
+
+})

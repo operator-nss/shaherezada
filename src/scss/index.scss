@@ -213,6 +213,9 @@
    @media (max-width: $tablet) {
       align-items: center;
    }
+   @media (max-width: $mobile) {
+      transform: translate(-10%, 0px);
+   }
    // .flower-mainblock__image
 
    &__image {
@@ -260,6 +263,10 @@
       text-align: center;
       text-transform: uppercase;
       margin: rem(-45) rem(0) rem(0) rem(0);
+      transform: translate(13%, 0px);
+      @media (max-width: $tablet) {
+         transform: translate(30px, 0px);
+      }
    }
 }
 //========================================================================================================================================================
@@ -470,6 +477,11 @@
          width: 87px;
          height: 106px;
          transform: translate(-163%, -23px);
+         @media (max-width: $tablet) {
+            width: 57px;
+            height: 70px;
+            transform: translate(5%, 0px);
+         }
       }
       span {
          margin: rem(0) rem(0) rem(100) rem(28);
@@ -496,6 +508,9 @@
       position: relative;
       max-width: 900px;
       margin: rem(0) rem(0) rem(0) 40px;
+      @media (max-width: $pc) {
+         margin: 0;
+      }
       p {
          color: #ffffff;
          font-size: 19px;
@@ -665,6 +680,26 @@
          padding-right: 200px;
       }
    }
+
+   // .item-doubts__text-3
+
+   &__text-3 {
+      p {
+         // padding: 0;
+         @include adaptiveValue("padding-right", 100, 0);
+         @media (max-width: $tablet) {
+            padding: 0;
+         }
+         span {
+            @include adaptiveValue("font-size", 23, 10);
+         }
+         @media (max-width: $mobile) {
+            br {
+               display: none;
+            }
+         }
+      }
+   }
 }
 
 .answer-doubts {
@@ -679,6 +714,9 @@
       content: "";
       position: absolute;
       background: url("@img/icon/curl_b.png") center / contain no-repeat;
+      @media (max-width: $tablet) {
+         display: none;
+      }
    }
    &::before {
       right: 0;
@@ -708,10 +746,7 @@
          height: 100%;
       }
       @media (max-width: $tablet) {
-         width: 200px;
-         flex: 0 0 rem(200);
-         height: 150px;
-         margin: rem(0) rem(0) rem(20) rem(0);
+         display: none;
       }
    }
 
@@ -821,6 +856,9 @@
          right: 0;
          top: 0;
       }
+      @media (max-width: em(1300)) {
+         transform: translate(16%, 0px);
+      }
    }
 
    // .learn-doubts__text
@@ -851,6 +889,9 @@
          bottom: 0;
          left: 0;
          transform: translate(-7%, -34px);
+         @media (max-width: $tablet) {
+            display: none;
+         }
       }
    }
 
@@ -1392,6 +1433,9 @@
 
    &__text-2 {
       padding: rem(10) rem(0) rem(0) rem(150);
+      @media (max-width: $tablet) {
+         padding: rem(0) rem(0) rem(0) rem(0);
+      }
    }
 }
 
@@ -1579,6 +1623,10 @@
       @include adaptiveValue("width", 410, 100);
       @media (max-width: $pc) {
          top: -5%;
+      }
+      @media (max-width: em(1600)) {
+         left: auto;
+         right: -5%;
       }
    }
    &::after {
@@ -1806,6 +1854,9 @@
 
    &__container {
       padding: rem(0) rem(89);
+      @media (max-width: $pc) {
+         padding: 0 15px;
+      }
    }
 
    // .numbers__title
@@ -1814,6 +1865,7 @@
       text-align: center;
       color: #161616;
       font-size: 23px;
+      @include adaptiveValue("font-size", 23, 16);
       line-height: math.div(40, 23);
       margin: rem(0) rem(0) rem(58) rem(0);
       @include adaptiveValue("margin-bottom", 58, 25);
@@ -1996,14 +2048,15 @@
    // .iknow__subtext
 
    &__subtext {
-      width: 649px;
+      max-width: 649px;
       height: 69px;
       color: #161616;
       font-family: Gilroy;
       font-size: 22px;
+      @include adaptiveValue("font-size", 22, 14);
       line-height: math.div(48, 22);
       margin: rem(20) rem(0) rem(0) rem(350);
-      @include adaptiveValue("margin-left", 350, 0);
+      @include adaptiveValue("margin-left", 350, 0, 1300, 320, 1);
    }
 }
 .item-iknow {
@@ -2018,14 +2071,25 @@
       position: relative;
       z-index: 2;
       transform: translate(253px, -20px);
+      @media (max-width: $pc) {
+         transform: translate(230px, -20px);
+      }
+      @media (max-width: $tablet) {
+         transform: translate(0px, -20px);
+         max-width: 100%;
+      }
       p {
          text-align: center;
          max-width: 100%;
          font-weight: 600;
          font-style: normal;
          padding: rem(40) rem(60) rem(40);
+         @media (max-width: $tablet) {
+            padding: rem(20) rem(20) rem(20);
+         }
          @media (min-width: $tablet) {
             padding-left: 100px;
+            @include adaptiveValue("padding-left", 100, 0);
             text-align: right;
          }
       }
@@ -2109,6 +2173,9 @@
       width: 348px;
       height: 342px;
       transform: translate(-89%, -22%);
+      @media (max-width: $pc) {
+         // transform: translate(-50%, -30%);
+      }
       @media (max-width: $tablet) {
          transform: translate(0%, -30%);
          opacity: 0.25;
@@ -2304,6 +2371,9 @@
          position: relative;
          max-width: 100%;
          flex: 0 1 50%;
+         @media (max-width: $tablet) {
+            flex: 1 1 100%;
+         }
       }
    }
 
@@ -2514,6 +2584,10 @@
             position: absolute;
             bottom: -7px;
             left: 0;
+            @media (max-width: $mobile) {
+               height: 2px;
+               bottom: -3px;
+            }
          }
       }
    }
@@ -3097,11 +3171,13 @@
       height: 454px;
       padding: rem(0) rem(100) rem(0) rem(0);
       @include adaptiveValue("padding-right", 100, 0);
-      // @include adaptiveValue("height", 495, 300);
-      // @include adaptiveValue("width", 454, 300);
+      @include adaptiveValue("height", 495, 300);
+      @include adaptiveValue("width", 454, 300);
       @media (max-width: $tablet) {
          flex: 1 1 auto;
+         transform: translate(-7%, 0px);
       }
+
       img {
          width: 100%;
          height: 100%;
@@ -3286,7 +3362,7 @@
 
    &__title {
       font-size: 23px;
-      @include adaptiveValue("font-size", 23, 14);
+      @include adaptiveValue("font-size", 23, 12);
       font-weight: 800;
       text-transform: uppercase;
       line-height: 150%;
@@ -3577,8 +3653,8 @@
 //========================================================================================================================================================
 
 .installments-packages {
-   @include adaptiveValue("padding-top", 80, 40);
-   @include adaptiveValue("padding-bottom", 80, 40);
+   @include adaptiveValue("padding-top", 80, 20);
+   @include adaptiveValue("padding-bottom", 80, 20);
    // .installments-packages__title
 
    &__title {
@@ -3623,7 +3699,8 @@
    // .promotion__timer
 
    &__timer {
-      flex: 0 1 rem(320);
+      flex: 0 1 rem(400);
+      // width: 100%;
       @media (max-width: $tablet) {
          flex: 1 1 auto;
          margin: 0 auto;
@@ -3688,7 +3765,7 @@
       max-width: 657px;
       margin: 0 auto;
       margin-bottom: 10px;
-      @include adaptiveValue("margin-bottom", 10, 0);
+      @include adaptiveValue("margin-bottom", 10, 20);
    }
 
    // .for-what__item
@@ -3753,6 +3830,7 @@
       font-size: 20px;
       @include adaptiveValue("font-size", 20, 12);
       padding: rem(0) rem(0) rem(0) rem(100);
+      @include adaptiveValue("padding-left", 100, 0, 1400, 320, 1);
       line-height: math.div(48, 20);
       span {
          color: #f79b0c;
@@ -3895,6 +3973,9 @@
       margin: rem(0) rem(0) rem(84) rem(0);
       padding: rem(0) rem(0) rem(0) rem(110);
       @include adaptiveValue("margin-bottom", 84, 30);
+      @media (max-width: $tablet) {
+         padding: rem(0);
+      }
       p {
          &:not(:last-child) {
             margin-bottom: rem(20);
@@ -4011,6 +4092,7 @@
    &__title {
       text-align: center;
       margin: rem(0) rem(0) rem(120) rem(0);
+      @include adaptiveValue("margin-bottom", 120, 20);
       span {
          position: relative;
          &::before,
@@ -4042,6 +4124,9 @@
 
    &__image {
       padding: rem(0) rem(130);
+      @media (max-width: $tablet) {
+         padding: 0;
+      }
       &:last-child {
          position: relative;
          &::after {
@@ -4076,6 +4161,9 @@
       &::after {
          content: "";
          position: absolute;
+         @media (max-width:$tablet){
+            display: none;
+         }
       }
       &::before {
          background: url("@img/bg/curl.png") center / contain no-repeat;
@@ -4116,12 +4204,12 @@
       &::before {
          right: -1%;
          bottom: 18%;
-         transform:translate(-200px, 0px) rotate(213deg);
+         transform: translate(-200px, 0px) rotate(213deg);
       }
       &::after {
          right: 0%;
          bottom: 35%;
-         transform:translate(-200px, 0px) rotate(180deg);
+         transform: translate(-200px, 0px) rotate(180deg);
       }
    }
 

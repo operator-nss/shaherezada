@@ -6,11 +6,11 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220303184014">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220308172230">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://atuin.ru/demo/js/circletype.min.js?_v=20220303184014"></script>
+	<script src="https://atuin.ru/demo/js/circletype.min.js?_v=20220308172230"></script>
 
 </head>
 
@@ -1636,33 +1636,38 @@
 
 						<div class="feedback__promotion promotion">
 							<div class="promotion__timer">
-								<div>Загрузка таймера</div>
-								<!--Начало кода "proТаймера" (id:45331)-->
-								<script src="//cdcs.makedreamprofits.ru/jmdp.js?_v=20220303184014"></script>
-								<script>
-									var pt_uid = "621ba7019a31a";
-									(function(d, w) {
-										n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f =
-											function() {
+								<!-- <div class="promotion__days">день</div>
+                        <div class="promotion__hours">часов</div>
+                        <div class="promotion__minutes">минуты</div>
+                        <div class="promotion__seconds">секунд</div> -->
+
+								<div class="timer-wrap">
+									<!--Начало кода "proТаймера" (id:45308)-->
+									<script src="//cdcs.makedreamprofits.ru/jmdp.js?_v=20220308172230"></script>
+									<script>
+										var pt_uid = "6215357563405";
+										(function(d, w) {
+											n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function() {
 												n.parentNode.insertBefore(s, n);
 											};
-										s.type = "text/javascript";
-										s.async = true;
-										o = (new Date()).getTimezoneOffset();
-										qs = document.location.search.split("+").join(" ");
-										re = /[?&]?([^=]+)=([^&]*)/g;
-										m = "";
-										while (tokens = re.exec(qs)) try {
-											if ("email" === decodeURIComponent(tokens[1])) m = decodeURIComponent(tokens[2]);
-										} catch (t) {}
-										i = "";
-										s.src = "//cdcs.makedreamprofits.ru/?" + pt_uid + "," + o + "," + m;
-										if ("[object Opera]" === w.opera) d.addEventListener("DomContentLoaded", f, false);
-										else f();
-									})(document, window);
-								</script>
-								<!--Конец кода "proТаймера"-->
-
+											s.type = "text/javascript";
+											s.async = true;
+											o = (new Date()).getTimezoneOffset();
+											qs = document.location.search.split("+").join(" ");
+											re = /[?&]?([^=]+)=([^&]*)/g;
+											m = "";
+											while (tokens = re.exec(qs)) try {
+												if ("email" === decodeURIComponent(tokens[1])) m = decodeURIComponent(tokens[2]);
+											} catch (t) {}
+											i = "";
+											s.src = "//cdcs.makedreamprofits.ru/?" + pt_uid + "," + o + "," + m;
+											if ("[object Opera]" === w.opera) d.addEventListener("DomContentLoaded", f, false);
+											else f();
+										})(document, window);
+									</script>
+									<!--Конец кода "proТаймера"-->
+									<div class="cd_timer"></div>
+								</div>
 							</div>
 							<div class="promotion__text">Оставляем за собой право заблокировать
 								страницу раньше указанного времени,
@@ -1733,7 +1738,7 @@
 				<div class="investment__container">
 					<div class="doubts__item item-doubts">
 
-						<div class="item-doubts__text item-doubts__text-2">
+						<div class="item-doubts__text item-doubts__text-2 item-doubts__text-3">
 							<div class="item-doubts__bg item-doubts__bg-1"></div>
 							<div class="item-doubts__bg item-doubts__bg-2"></div>
 							<div class="item-doubts__bg item-doubts__bg-3"></div>
@@ -1926,7 +1931,8 @@
 		</footer>
 
 	</div>
-	<script src="js/app.min.js?_v=20220303184014"></script>
+	<script src="js/app.min.js?_v=20220308172230"></script>
+
    <div id="standart" aria-hidden="true" class="popup">
       <div class="popup__wrapper">
          <div class="popup__content">
@@ -2065,7 +2071,6 @@
          </div>
       </div>
    </div>
-
 
 </body>
 

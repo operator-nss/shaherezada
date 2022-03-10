@@ -26,7 +26,7 @@
       color: #f655a0;
       font-family: intro;
       font-size: 65px;
-      @include adaptiveValue("font-size", 65, 36);
+      @include adaptiveValue("font-size", 65, 32);
       line-height: math.div(72, 65);
       text-align: center;
       text-transform: uppercase;
